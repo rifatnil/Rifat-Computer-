@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rifat Computer & Verities Store</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background: #0077b6;
+            color: white;
+            padding: 15px 10px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        header p {
+            margin: 5px 0 0 0;
+            font-size: 1rem;
+        }
+        nav {
+            background: #023e8a;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background: #0077b6;
+        }
+        section {
+            max-width: 1000px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            margin-top: 0;
+            color: #023e8a;
+        }
+        ul.product-list {
+            list-style: none;
+            padding: 0;
+            columns: 2;
+            column-gap: 20px;
+        }
+        ul.product-list li {
+            background: #e0e0e0;
+            margin: 5px 0;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 150px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        form label {
+            margin: 8px 0 4px;
+            font-weight: 600;
+        }
+        form input, form textarea, form select {
+            padding: 8px;
+            font-size: 1rem;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            resize: vertical;
+        }
+        form button {
+            margin-top: 15px;
+            padding: 10px;
+            font-weight: 700;
+            background: #0077b6;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        form button:hover {
+            background: #023e8a;
+        }
+        footer {
+            text-align: center;
+            padding: 12px 10px;
+            background: #0077b6;
+            color: white;
+            margin-top: 30px;
+            font-size: 0.9rem;
+        }
+        @media(max-width: 600px) {
+            ul.product-list {
+                columns: 1;
+            }
+            .gallery img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .success-message {
+            color: green;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Rifat Computer & Verities Store</h1>
+    <p>মরিয়ম বাজার, খানসামা, দিনাজপুর | ফোন: ০১৭০৬৭২৭১১৬</p>
+</header>
+
+<nav>
+    <a href="#products">প্রোডাক্টসমূহ</a>
+    <a href="#services">সার্ভিসসমূহ</a>
+    <a href="#gallery">গ্যালারি</a>
+    <a href="#order">অর্ডার করো</a>
+    <a href="#contact">যোগাযোগ</a>
+</nav>
+
+<section id="products">
+    <h2>প্রোডাক্টসমূহ</h2>
+    <ul class="product-list">
+        <li>স্টেশনারি প্রোডাক্ট</li>
+        <li>ইলেকট্রনিক প্রোডাক্ট</li>
+        <li>মোবাইল ইলেকট্রনিক</li>
+        <li>কসমেটিকস</li>
+        <li>ফোন বিক্রি</li>
+        <li>অনলাইনের যাবতীয় কার্যক্রম</li>
+    </ul>
+</section>
+
+<section id="services">
+    <h2>সার্ভিসসমূহ</h2>
+    <ul class="product-list">
+        <li>ফটোকপি</li>
+        <li>ছবি সংরক্ষণ ও লেমিনেশন</li>
+        <li>অনলাইন আবেদন</li>
+        <li>মোবাইল গ্যাজেট সার্ভিস</li>
+        <li>অন্যন্য</li>
+    </ul>
+</section>
+
+<section id="gallery">
+    <h2>গ্যালারি</h2>
+    <div class="gallery">
+        <!-- এখানে তুমি ছবি যোগ করতে পারবে -->
+        <img src="https://via.placeholder.com/150x100?text=ছবি+১" alt="ছবি ১" />
+        <img src="https://via.placeholder.com/150x100?text=ছবি+২" alt="ছবি ২" />
+        <img src="https://via.placeholder.com/150x100?text=ছবি+৩" alt="ছবি ৩" />
+    </div>
+</section>
+
+<section id="order">
+    <h2>অর্ডার ফর্ম</h2>
+    <form id="orderForm">
+        <label for="name">নাম:</label>
+        <input type="text" id="name" name="name" placeholder="আপনার নাম" required />
+
+        <label for="phone">ফোন নম্বর:</label>
+        <input type="tel" id="phone" name="phone" placeholder="০১৭xxxxxxxx" pattern="[০-৯]{11}" required />
+
+        <label for="product">পণ্য/সার্ভিস নির্বাচন করুন:</label>
+        <select id="product" name="product" required>
+            <option value="" disabled selected>-- নির্বাচন করুন --</option>
+            <option value="স্টেশনারি প্রোডাক্ট">স্টেশনারি প্রোডাক্ট</option>
+            <option value="ইলেকট্রনিক প্রোডাক্ট">ইলেকট্রনিক প্রোডাক্ট</option>
+            <option value="মোবাইল ইলেকট্রনিক">মোবাইল ইলেকট্রনিক</option>
+            <option value="কসমেটিকস">কসমেটিকস</option>
+            <option value="ফটোকপি">ফটোকপি</option>
+            <option value="ছবি সংরক্ষণ ও লেমিনেশন">ছবি সংরক্ষণ ও লেমিনেশন</option>
+            <option value="অনলাইন আবেদন">অনলাইন আবেদন</option>
+            <option value="মোবাইল গ্যাজেট সার্ভিস">মোবাইল গ্যাজেট সার্ভিস</option>
+            <option value="অন্যান্য">অন্যান্য</option>
+        </select>
+
+        <label for="details">বিস্তারিত লিখুন:</label>
+        <textarea id="details" name="details" rows="3" placeholder="অতিরিক্ত তথ্য দিন (ঐচ্ছিক)"></textarea>
+
+        <button type="submit">অর্ডার পাঠান</button>
+        <p class="success-message" id="successMessage" style="display:none;">আপনার অর্ডার সফলভাবে জমা হয়েছে। ধন্যবাদ!</p>
+    </form>
+</section>
+
+<section id="contact">
+    <h2>যোগাযোগ</h2>
+    <p>ঠিকানা: মরিয়ম বাজার, খানসামা, দিনাজপুর</p>
+    <p>ফোন: ০১৭০৬৭২৭১১৬</p>
+    <p>হোয়াটসঅ্যাপ: <a href="https://wa.me/8801706727116" target="_blank">০১৭০৬৭২৭১১৬</a></p>
+</section>
+
+<footer>
+    &copy; ২০২৫ Rifat Computer & Verities Store | All rights reserved
+</footer>
+
+<script>
+    document.getElementById('orderForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        // সাধারণ সিমুলেশন: এখানে ফর্ম ডাটা সার্ভারে যাবে না, তাই শুধু Success দেখানো হবে
+        document.getElementById('successMessage').style.display = 'block';
+        this.reset();
+    });
+</script>
+
+</body>
+</html>
